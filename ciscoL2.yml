@@ -1,6 +1,5 @@
 - name: "Rest conf switch cisco L2"
-  hosts: switch
-  connection: local
+  hosts: all
   gather_facts: no
   tasks:
     - name: "Get info version"
