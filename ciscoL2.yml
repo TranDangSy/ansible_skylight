@@ -3,7 +3,7 @@
   connection: local
   vars:
      ansible_connection: ansible.netcommon.network_cli
-     ansible_network_os: ios
+     ansible_network_os: cisco.ios
      ansible_user: admin
      ansible_password: buncha11
   gather_facts: false
