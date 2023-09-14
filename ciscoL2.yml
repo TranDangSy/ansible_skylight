@@ -2,8 +2,10 @@
   hosts: "*"
   connection: network_cli
   gather_facts: false
-  vars:
-    ansible_python_interpreter: /usr/bin/python3
+  ansible_connection: ansible.netcommon.network_cli
+  ansible_network_os: cisco.ios.ios
+  ansible_user: admin
+  ansible_password: buncha11
   tasks:
     - name: "Get info version"
       ios_command:
