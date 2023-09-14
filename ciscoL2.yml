@@ -1,5 +1,5 @@
 - name: "Rest conf switch cisco L2"
-  hosts: "*"
+  hosts: all
   connection: local
   vars:
      ansible_connection: ansible.netcommon.network_cli
