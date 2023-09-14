@@ -1,7 +1,7 @@
 - name: "Rest conf switch cisco L2"
   hosts: "*"
-  connection: ansible.netcommon.network_cli
-  gather_facts: no
+  connection: network_cli
+  gather_facts: false
   vars:
     ansible_python_interpreter: /usr/bin/python3
   tasks:
