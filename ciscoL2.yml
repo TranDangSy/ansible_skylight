@@ -1,6 +1,10 @@
 - name: "Rest conf switch cisco L2"
   hosts: "*"
-  connection: network_cli
+  vars:
+     ansible_connection: ansible.netcommon.network_cli
+     ansible_network_os: ios
+     ansible_user: admin
+     ansible_password: buncha11
   gather_facts: false
   tasks:
     - name: "Get info version"
