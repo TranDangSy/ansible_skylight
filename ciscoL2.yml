@@ -1,7 +1,9 @@
 - name: "Rest conf switch cisco L2"
-  hosts: all
+  hosts: "*"
   connection: local
   gather_facts: no
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
     - name: "Get info version"
       ios_command:
