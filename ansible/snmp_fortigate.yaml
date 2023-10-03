@@ -1,0 +1,38 @@
+- hosts: fortigates
+  collections:
+    - fortinet.fortios
+  connection: httpapi
+  vars:
+   vdom: "root"
+   ansible_httpapi_use_ssl: yes
+   ansible_httpapi_validate_certs: no
+   ansible_httpapi_port: 443
+  tasks:
+  - name: SNMP user configuration.
+    fortios_system_snmp_user:
+      vdom:  "{{ vdom }}"
+      state: "present"
+      access_token: "xymn0f8gGf5cjzG0xHsHx7GHpHgc8d"
+      enable_log: true
+      system_snmp_user:
+        auth_proto: "md5"
+        auth_pwd: "<your_own_value>"
+        events: 
+          - "cpu-high"
+          - "mem-low"
+          - "ospf-nbr-state-change"
+        ha_direct: "enable"
+        name: "default_name_8"
+        notify_hosts: "<your_own_value>"
+        notify_hosts6: "<your_own_value>"
+        queries: "enable"
+        query_port: "161"
+        security_level: "no-auth-no-priv"
+        source_ip: "172.16.0.30"
+        status: "enable"
+        trap_lport: "162"
+        trap_rport: "162"
+        trap_status: "enable"
+        vdoms:
+         -
+            name: "default_name_23 (source system.vdom.name)"

@@ -1,0 +1,25 @@
+- hosts: cisco
+  gather_facts: no
+  tasks:
+  - name: SET COMMUNITY STRING 
+    ios_config:
+      lines:
+        - snmp-server community skylight RO 99
+  - name: SET CONTACT INFO 
+    ios_config:
+      lines:
+        - snmp-server contact sytd@gearinc.com
+  - name: ENABLE OSPF TRAPS 
+    ios_config:
+      lines:
+        - snmp-server enable traps ospf state-change
+        - snmp-server enable traps ospf errors
+        - snmp-server enable traps ospf retransmit
+        - snmp-server enable traps ospf lsa
+        - snmp-server enable traps ospf cisco-specific errors
+        - snmp-server enable traps ospf cisco-specific retransmit
+        - snmp-server enable traps ospf cisco-specific lsa
+  - name: SET SNMP SERVER ADDRESS 
+    ios_config:
+      lines:
+        - snmp-server host 172.16.0.30 version 2c public udp-port 161
