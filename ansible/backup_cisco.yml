@@ -9,5 +9,5 @@
       ios_config:
         backup: yes
         backup_options:
-          filename: "running-config-{{ timestamp.stdout }}"
+          filename: "Gearinc-CSW01-G#-{{ timestamp.stdout }}"
           dir_path: "backups/{{ inventory_hostname }}"
