@@ -1,0 +1,13 @@
+- hosts: switch
+  gather_facts: no
+  connection: local
+  tasks:
+    - name: get timestamp
+      command: date +%Y%m%d-%H-%M-%S
+      register: timestamp
+    - name: backup ios config
+      ios_config:
+        backup: yes
+        backup_options:
+          filename: "running-config-{{ timestamp.stdout }}"
+          dir_path: "backups/{{ inventory_hostname }}"

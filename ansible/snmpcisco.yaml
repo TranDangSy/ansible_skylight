@@ -1,5 +1,5 @@
 - hosts: cisco
-  gather_facts: no
+  gather_facts: false
   tasks:
   - name: SET COMMUNITY STRING 
     ios_config:
