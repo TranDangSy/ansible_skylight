@@ -22,4 +22,4 @@
   - name: SET SNMP SERVER ADDRESS 
     ios_config:
       lines:
-        - snmp-server host 172.16.0.30 version 2c public udp-port 161
+        - snmp-server host 172.16.0.30 version 2c skylight udp-port 161
