@@ -5,11 +5,11 @@
     ios_config:
       lines:
         - snmp-server community skylight RO 99
-  - name: SET CONTACT INFO 
+  - name: SET CONTACT INFO
     ios_config:
       lines:
         - snmp-server contact sytd@gearinc.com
-  - name: ENABLE OSPF TRAPS 
+  - name: ENABLE OSPF TRAPS
     ios_config:
       lines:
         - snmp-server enable traps ospf state-change

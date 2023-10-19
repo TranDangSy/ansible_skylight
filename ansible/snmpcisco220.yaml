@@ -5,7 +5,7 @@
     ios_config:
       lines:
         - snmp-server
-  - name: SET COMMUNITY STRING 
+  - name: SET COMMUNITY STRING
     ios_config:
       lines:
         - snmp-server community skylight ro

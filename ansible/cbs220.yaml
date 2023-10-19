@@ -1,0 +1,21 @@
+- hosts: cisco
+  gather_facts: false
+  connection: local
+
+  vars:
+    cli:
+      username: admin
+      password: buncha11a@
+      transport: cli
+  tasks:
+  - name: Active SNMP
+    ios_config:
+      provider: "{{ cli }}"
+      lines:
+        - snmp-server
+        - snmp-server community skylight ro
+        - snmp-server contact sytd@gearinc.com
+        - snmp-server enable trap linkUpDown
+        - snmp-server host 172.16.0.30 version 2c skylight udp-port 161
+    register: print_ouput
+  - debug: var=print output

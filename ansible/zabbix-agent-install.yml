@@ -19,3 +19,4 @@
 
 HostName:172.16.15.201
 HostKeyAlgorithms=+ssh-dss
+hostvars.localhost.DTG
