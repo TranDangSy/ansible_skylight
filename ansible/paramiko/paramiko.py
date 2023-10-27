@@ -23,4 +23,4 @@ def main():
     output = send_command(remote_conn, cmd='show version')
     print ('\n>>>>')
     print (output)
-    print ('>>>>\n')h 
+    print ('>>>>\n')
