@@ -20,3 +20,4 @@
 HostName:172.16.15.201
 HostKeyAlgorithms=+ssh-dss
 hostvars.localhost.DTG
+sshpass -p 'Skylight1qaz@WSX' sftp gearinc@172.16.15.240:/Backup_Network/Zabbix <<<$'put -r zabbix.sql'
