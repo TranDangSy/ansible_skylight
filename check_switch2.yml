@@ -1,5 +1,5 @@
 - name: "Get infomation device Cisco"
-  hosts: cbs220
+  hosts: switch
   connection: local
   gather_facts: no
   tasks:
