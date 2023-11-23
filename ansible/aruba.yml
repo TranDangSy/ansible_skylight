@@ -1,4 +1,6 @@
-tasks:
-  - name: Run show version on remote devices
-    community.network.aruba_command:
-      commands: show version
+- hosts: cisco
+  gather_facts: false
+  tasks:
+    - name: Run show version on remote devices
+      community.network.aruba_command:
+        commands: show version
