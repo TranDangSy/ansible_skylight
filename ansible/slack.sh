@@ -13,7 +13,10 @@ to_nas_text="Running backup to nas device: $to_nas"
 ##pri-note
 url=https://hooks.slack.com/services/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
 
+payload={
+    "color": "#1e81b0"}
+
 #############################################################
 # gui bao cao
-curl -X POST -H 'Content-type: application/json' --data '{"text": "'"$todayDatetext"' \n '"$from_cisco_text"' \n '"$to_nas_text"'"}' $url
+curl -X POST -H 'Content-type: application/json' --data '{"payload=" "text": "'"$todayDatetext"' \n '"$from_cisco_text"' \n '"$to_nas_text"'"}' $url
 #############################################################
