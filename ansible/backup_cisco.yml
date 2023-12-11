@@ -1,4 +1,5 @@
-- hosts: switch
+- name: "Backup configue device Cisco"
+  hosts: switch
   gather_facts: no
   connection: local
   tasks:
@@ -9,5 +10,5 @@
       ios_config:
         backup: yes
         backup_options:
-          filename: "Gearinc-CSW01-G#-{{ timestamp.stdout }}"
-          dir_path: "/home/backups/{{ inventory_hostname }}"
+          filename: "{{ inventory_hostname }}-{{ timestamp.stdout }}"
+          dir_path: "backups/{{ inventory_hostname }}"
