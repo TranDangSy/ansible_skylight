@@ -10,4 +10,4 @@
         backup: yes
         backup_options:
           filename: "Gearinc-CSW01-G#-{{ timestamp.stdout }}"
-          dir_path: "home/backups/{{ inventory_hostname }}"
+          dir_path: "/home/backups/{{ inventory_hostname }}"
