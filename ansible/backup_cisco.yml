@@ -11,4 +11,4 @@
         backup: yes
         backup_options:
           filename: "{{ inventory_hostname }}-{{ timestamp.stdout }}"
-          dir_path: "/home/backups/{{ inventory_hostname }}"
+          dir_path: "/var/lib/awx/projects/{{ inventory_hostname }}"
