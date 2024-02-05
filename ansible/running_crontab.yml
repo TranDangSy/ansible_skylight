@@ -1,0 +1,10 @@
+- name: Running bash on system
+  hosts: localhost
+  tasks:
+    - name: 'Run a bash using an executable in a system path'
+      ansible.builtin.script:
+        cmd: /home/ansible/cisco_backup.sh
+        executable: /usr/bin/bash
+      register: result
+    - debug:
+      msg: "{{ result }}"

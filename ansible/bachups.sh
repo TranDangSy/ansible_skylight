@@ -1,0 +1,1 @@
+sshpass -p 'Skylight1qaz@WSX' sftp gearinc@172.16.15.240:/Backup_Network/Backup_new <<<$'put -r backups'

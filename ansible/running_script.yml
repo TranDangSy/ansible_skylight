@@ -1,0 +1,6 @@
+- name: Running script
+  hosts: localhost
+  tasks:
+    - name: 'Run a script using an executable in a system path'
+      ansible.builtin.script:
+      cmd: 
