@@ -7,4 +7,4 @@
         executable: /usr/bin/bash
       register: result
     - debug:
-      msg: "{{ result }}"
+        msg: "{{ result }}"
