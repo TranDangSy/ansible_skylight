@@ -3,7 +3,7 @@
   tasks:
     - name: 'Run a bash using an executable in a system path'
       ansible.builtin.script:
-        cmd: /backups/backups.sh
+        cmd: ../backups/backups.sh
         executable: /usr/bin/bash
       register: result
     - debug:
