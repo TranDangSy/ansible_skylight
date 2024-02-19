@@ -1,10 +1,8 @@
 - name: Running bash on system
   hosts: localhost
   tasks:
-    - name: 'Run a bash using an executable in a system path'
-      ansible.builtin.script:
-        cmd: backups/backups.sh
-        executable: /usr/bin/bash
+#    - name: 'Run a bash using an executable in a system path'
+    - command: bash /home/ansible/backups/backups.sh
       register: result
     - debug:
         msg: "{{ result }}"
