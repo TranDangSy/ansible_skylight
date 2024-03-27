@@ -1,0 +1,8 @@
+- name: Running bash on system
+  hosts: localhost
+  tasks:
+#    - name: 'Run backup sql zabbix from host to NAS'
+    - command: bash /home/zabbix/backup.sh
+      register: result
+    - debug:
+        msg: "{{ result }}"
