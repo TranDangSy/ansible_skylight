@@ -1,10 +1,8 @@
 - name: Running bash on system
   hosts: ubuntu
   tasks:
-    - name: 'Run backup sql from docker'
-      community.docker.docker_container_exec:
-        container: mysql-server
-        command: /usr/bin/mysqldump -u root --password=Gear1234@# zabbix > ~/zabbix.sql
+#    - name: 'Run backup sql from docker'
+    - command: docker exec mysql-server /usr/bin/mysqldump -u root --password=Gear1234@# zabbix > ~/zabbix.sql
       register: result
     - debug:
         msg: "{{ result }}"
