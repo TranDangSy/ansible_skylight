@@ -2,7 +2,7 @@
   hosts: ubuntu
   tasks:
 #    - name: 'Run backup sql zabbix from host to NAS'
-    - command: bash /home/zabbix/backup.sh
+    - command: backup.sh
       register: result
     - debug:
         msg: "{{ result }}"
