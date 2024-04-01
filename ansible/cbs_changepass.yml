@@ -1,0 +1,11 @@
+- hosts: cbs
+  gather_facts: false
+  tasks:
+  - name: Config line password setting
+    ios_config:
+      lines:
+        - username admin password 18tamtrinh 
+  - name: Write password
+    ios_config:
+      lines:
+        - write memory
