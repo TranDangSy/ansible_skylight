@@ -3,9 +3,9 @@
   tasks:
   - name: Config line password setting
     community.ciscosmb.command:
-      command:
+      commands:
         - username admin password buncha11a$ 
   - name: Write password
     community.ciscosmb.command:
-      command:
+      commands:
         - write memory
