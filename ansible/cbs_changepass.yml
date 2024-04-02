@@ -2,10 +2,10 @@
   gather_facts: false
   tasks:
   - name: Config line password setting
-    ios_config:
-      lines:
+    community.ciscosmb.command:
+      command:
         - username admin password buncha11a$ 
   - name: Write password
-    ios_config:
-      lines:
+    community.ciscosmb.command:
+      command:
         - write memory
