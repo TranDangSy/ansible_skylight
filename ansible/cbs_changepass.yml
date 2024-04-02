@@ -4,7 +4,7 @@
   - name: Config line password setting
     ios_config:
       lines:
-        - username admin password 18tamtrinh 
+        - username admin password buncha11a$ 
   - name: Write password
     ios_config:
       lines:
