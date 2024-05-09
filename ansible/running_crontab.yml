@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
 #    - name: 'Run a bash using an executable in a system path'
-    - command: bash /home/ansible/fortigate_cisco_toNas.sh
+    - command: bash /home/ansible/backups_to_Nas.sh
       register: result
     - debug:
         msg: "{{ result }}"

@@ -1,9 +1,0 @@
-- name: Running bash on system
-  hosts: zabbix_skylight
-  tasks:
-    - name: 'Run backup sql zabbix from host to NAS'
-      command: bash backup_to_Nas.sh
-      register: result
-
-    - debug:
-        msg: "{{ result }}"
