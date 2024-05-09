@@ -1,8 +1,19 @@
 - name: Running bash on system
-  hosts: ubuntu
+  hosts: zabbix_skylight
   tasks:
-#    - name: 'Run backup sql from docker'
-    - command: bash sql_backup.sh
+    - name: Run backup sql from docker
+      command: bash sql_backup.sh
       register: result
+
+    - name: Wait until the database backup completed on server
+      wait_for:
+        path: ~/zabbix.sql
+        state: present
+        msg: "Timeout to find file zabbix.sql"
+
+    - name: 'Run backup sql zabbix from host to NAS'
+      command: bash backup_to_Nas.sh
+      register: result
+
     - debug:
-        msg: "{{ result }}"
+        msg: "{{ result.stdout }}"
