@@ -3,6 +3,6 @@
   tasks:
     - name: Fetch a file from the remote server
       ansible.builtin.fetch:
-        src: "snipeit.sql"  # Đường dẫn file trên máy remote
+        src: "~/snipeit.sql"  # Đường dẫn file trên máy remote
         dest: "/home/ansible/backups/mysql_snipeit/"  # Đường dẫn thư mục lưu trữ trên máy Ansible
         flat: yes  # Nếu flat là 'yes', file sẽ được lưu trực tiếp vào thư mục mà không giữ cấu trúc thư mục từ máy remote
