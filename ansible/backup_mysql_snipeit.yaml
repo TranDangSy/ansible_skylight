@@ -7,12 +7,6 @@
     - debug:
         msg: "{{ result }}"
 
-    - name: Wait until the database backup completed on server
-      wait_for:
-        path: ~/zabbix.sql
-        state: present
-        msg: "Timeout to find file zabbix.sql"
-
     - name: Fetch a file from snipe sever
       ansible.builtin.fetch:
         src: "~/snipeit.sql"  # Đường dẫn file trên máy remote
