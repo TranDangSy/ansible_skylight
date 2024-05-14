@@ -1,8 +1,0 @@
-- name: Running bash on system
-  hosts: snipeit
-  tasks:
-#    - name: 'Run backup sql snipeit'
-    - command: bash sql_backup.sh
-      register: result
-    - debug:
-        msg: "{{ result }}"

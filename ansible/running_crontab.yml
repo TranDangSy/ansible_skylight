@@ -1,8 +1,8 @@
 - name: Running bash on system
   hosts: localhost
   tasks:
-#    - name: 'Run a bash using an executable in a system path'
-    - command: bash /home/ansible/backups_to_Nas.sh
+    - name: 'Run a bash using an executable in a system path'
+      command: bash /home/ansible/backups_to_Nas.sh
       register: result
     - debug:
         msg: "{{ result }}"
