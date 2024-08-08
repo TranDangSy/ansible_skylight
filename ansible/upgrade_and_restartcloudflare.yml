@@ -13,8 +13,10 @@
       apt:
         name: cloudflared
         state: latest
+      register: cloudflared_upgrade
 
     - name: Restart cloudflared service
       systemd:
         name: cloudflared
         state: restarted
+      when: cloudflared_upgrade.changed
