@@ -1,0 +1,8 @@
+- name: Running copy file mysql snipeit
+  hosts: snipeit
+  tasks:
+    - name: Run auto update EIM
+      command: bash auto-update-EIM/run_update_daily.sh
+      register: result
+    - debug:
+        msg: "{{ result }}"
