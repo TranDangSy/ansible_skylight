@@ -4,7 +4,7 @@
   connection: local
   tasks:
     - name: get timestamp
-      command: date +%Y%m%d-%H-%M-%S
+      command: date +%d-%m-%Y
       register: timestamp
     - name: backup ios config
       ios_config:
