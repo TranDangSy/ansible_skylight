@@ -1,2 +1,2 @@
 # ansible_skylight
-Ansible for GearInc Shylight
+Ansible for GearGames
