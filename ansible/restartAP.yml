@@ -1,0 +1,8 @@
+- name: Running bash on system
+  hosts: localhost
+  tasks:
+    - name: 'Run a python restart device AP Aruba'
+      command: python3 restart_aruba.py
+      register: result
+    - debug:
+        msg: "{{ result }}"

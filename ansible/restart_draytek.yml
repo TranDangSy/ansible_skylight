@@ -1,0 +1,8 @@
+- name: Running bash on system
+  hosts: localhost
+  tasks:
+    - name: 'Run a python restart device switch Draytek'
+      command: python3 reboot_switch.py
+      register: result
+    - debug:
+        msg: "{{ result }}"
