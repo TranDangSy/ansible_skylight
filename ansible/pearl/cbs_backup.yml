@@ -11,4 +11,4 @@
     - name: Save the running configuration to a local file
       copy:
         content: "{{ running_config.stdout[0] }}"
-        dest: "/home/backups/{{ inventory_hostname }}-running-config.txt"
+        dest: "backups/{{ inventory_hostname }}-running-config.txt"
