@@ -1,0 +1,14 @@
+- name: Backup Cisco CBS 350 running config
+  hosts: cbs_switch
+  gather_facts: no
+  tasks:
+    - name: Collect running configuration
+      community.ciscosmb.command:
+        commands:
+          - show running-config
+      register: running_config
+
+    - name: Save the running configuration to a local file
+      copy:
+        content: "{{ running_config.stdout[0] }}"
+        dest: "backups/{{ inventory_hostname }}-running-config.txt"
