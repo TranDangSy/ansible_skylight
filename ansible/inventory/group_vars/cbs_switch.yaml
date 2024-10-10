@@ -2,3 +2,5 @@
 #ansible_network_cli_ssh_type: paramiko
 ansible_connection: ansible.netcommon.network_cli
 ansible_network_os: community.ciscosmb.ciscosmb
+ansible_user: admin
+ansible_password: GearINCHCMC@!999
