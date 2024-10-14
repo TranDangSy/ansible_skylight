@@ -12,6 +12,12 @@
       set_fact:
         current_date: "{{ control_time.ansible_facts.ansible_date_time.day }}-{{ control_time.ansible_facts.ansible_date_time.month }}-{{ control_time.ansible_facts.ansible_date_time.year }}"
 
+    - name: Create backup directory for the device if it doesn't exist
+      file:
+        path: "/backups/{{ inventory_hostname }}"
+        state: directory
+        mode: '0755'
+
     - name: Collect running configuration
       community.ciscosmb.command:
         commands:
