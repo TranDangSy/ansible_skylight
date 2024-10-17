@@ -14,7 +14,7 @@
 
     - name: Create backup directory for the device if it doesn't exist
       file:
-        path: "home/backups/{{ inventory_hostname }}"
+        path: "/home/backups/{{ inventory_hostname }}"
         state: directory
         mode: '0755'
 
