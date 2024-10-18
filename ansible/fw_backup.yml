@@ -9,7 +9,6 @@
     ansible_httpapi_use_ssl: true
     ansible_httpapi_validate_certs: no
     ansible_httpapi_port: 8443
-    fortios_access_token: "Hndkqf57h7N5s758zxfgQ4sgc4y6y1"
   tasks:
   - name: Get current time on Ansible control machine
     local_action:
