@@ -11,7 +11,7 @@
     ansible_httpapi_port: 8443
     ansible_network_os: fortinet.fortios.fortios
     ansible_connection: httpapi
-    fortios_access_token: "Hndkqf57h7N5s758zxfgQ4sgc4y6y1"
+    fortios_access_token: "fgbcmQdbjb6kktyr53gnbwxxzhdqnQ"
 
   tasks:
   - name: Get current time on Ansible control machine
