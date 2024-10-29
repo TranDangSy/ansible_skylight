@@ -36,4 +36,4 @@
   - name: Save the backup information.
     copy:
       content: '{{ backupinfo.meta.raw }}'
-      dest: 'backups/fortigate_backups/{{ inventory_hostname }}-{{ current_date }}.cfg'
+      dest: '/home/ansible/backups/fortigate_backups/{{ inventory_hostname }}-{{ current_date }}.cfg'
