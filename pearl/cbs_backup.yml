@@ -6,6 +6,7 @@
     ansible_network_os: community.ciscosmb.ciscosmb
     ansible_user: admin
     ansible_password: GearINCHCMC@!999
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
   tasks:
     - name: Get current time on Ansible control machine
@@ -33,4 +34,4 @@
     - name: Save the running configuration to a file with device name and date
       copy:
         content: "{{ running_config.stdout[0] }}"
-        dest: "/home/backups/{{ inventory_hostname }}/{{ inventory_hostname }}-config-{{ current_date }}.txt"
+        dest: "/home/ansible/backups/{{ inventory_hostname }}/{{ inventory_hostname }}-config-{{ current_date }}.txt"
