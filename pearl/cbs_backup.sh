@@ -1,1 +1,1 @@
-ansible-playbook home/ansible/playbooks/cbs_backup.yml
+ansible-playbook /home/ansible/playbooks/cbs_backup.yml
