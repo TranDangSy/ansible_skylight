@@ -3,4 +3,4 @@ collections:
   - name: fortinet.fortios
   - name: ansible.netcommon
   - name: community.ciscosmb
-  - name: ansible-pylibssh
+  - name: ansible.pylibssh
