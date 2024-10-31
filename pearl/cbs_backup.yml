@@ -1,5 +1,5 @@
 - name: Running bash on system
-  hosts: localhost
+  hosts: cbs_switch
   tasks:
     - name: 'Run a bash using an executable in a system path'
       command: ansible-playbook /home/ansible/playbooks/cbs_backup.yml
