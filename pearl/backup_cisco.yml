@@ -2,6 +2,12 @@
   hosts: switch
   gather_facts: no
   connection: local
+  vars:
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_network_os: cisco.ios.ios
+    ansible_user: admin
+    ansible_password: GearINCHCMC@!999
+
   tasks:
     - name: get timestamp
       command: date +%d-%m-%Y
