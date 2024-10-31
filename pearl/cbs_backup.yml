@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
     - name: 'Run a bash using an executable in a system path'
-      command: bash /home/ansible/cbs_backups.sh
+      command: ansible-playbook /home/ansible/playbooks/cbs_backup.yml
       register: result
     - debug:
         msg: "{{ result }}"
