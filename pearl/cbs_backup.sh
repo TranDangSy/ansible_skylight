@@ -1,1 +1,0 @@
-ansible-playbook -i /home/ansible/inventory/host_file.ini /home/ansible/playbooks/cbs_backup.yml
