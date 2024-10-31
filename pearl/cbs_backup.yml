@@ -1,8 +1,0 @@
-- name: Running bash on system
-  hosts: localhost
-  tasks:
-    - name: 'Run a bash using an executable in a system path'
-      command: ansible-playbook /home/ansible/playbooks/cbs_backup.yml
-      register: result
-    - debug:
-        msg: "{{ result }}"
