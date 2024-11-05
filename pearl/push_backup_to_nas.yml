@@ -1,0 +1,8 @@
+- name: Running bash push to NAS
+  hosts: localhost
+  tasks:
+    - name: 'Run a bash using an executable in a system path'
+      command: bash /home/ansible/push_to_Nas.sh
+      register: result
+    - debug:
+        msg: "{{ result }}"
