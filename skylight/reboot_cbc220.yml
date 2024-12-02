@@ -3,18 +3,10 @@
   tasks:
     - name: 'Run a python restart device switch Draytek'
       command: python3 cbs220_reboot.py
-      async: 550  # Tăng thời gian chờ tối đa
-      poll: 0     # Không chờ kết quả ngay lập tức
+      async: 1000  # Tăng thời gian chờ tối đa (1000 giây)
+      poll: 0      # Không chờ kết quả
       register: async_result
 
-    - name: Wait for the result of the long running command
-      async_status:
-        jid: "{{ async_result.ansible_job_id }}"
-      register: job_result
-      until: job_result.finished
-      retries: 30
-      delay: 10
-
-    - name: Show the final result
+    - name: Show that the command has been triggered
       debug:
-        msg: "{{ job_result }}"
+        msg: "Python script cbs220_reboot.py has been started with Job ID {{ async_result.ansible_job_id }}. The process will continue running in the background."
