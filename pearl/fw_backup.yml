@@ -4,16 +4,13 @@
   connection: httpapi
   collections:
     - fortinet.fortios
-  vars_files:
-    - vault.yml
   vars:
     vdom: "root"
     ansible_httpapi_use_ssl: yes
     ansible_httpapi_validate_certs: no
     ansible_httpapi_port: 8443
     ansible_network_os: fortinet.fortios.fortios
-    ansible_connection: httpapi
-    # fortios_access_token: "{{ lookup('env', 'FORTIOS_ACCESS_TOKEN') }}"
+    fortios_access_token: "{{ lookup('env', 'FORTIOS_ACCESS_TOKEN') }}"
 
   tasks:
   - name: Get current time on Ansible control machine
